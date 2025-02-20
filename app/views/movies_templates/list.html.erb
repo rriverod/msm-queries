@@ -13,7 +13,7 @@
 </tr>
 
 
-<% Movie.all.each do |a_movie| %>
+<% Movie.all.order({:year => :desc, :title => :asc}).each do |a_movie| %>
 <tr>
   <td> <%= a_movie.id %> </td>
 
